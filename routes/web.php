@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/hui', function () {
-    echo "sosi";
+    return view('forms');
 });
