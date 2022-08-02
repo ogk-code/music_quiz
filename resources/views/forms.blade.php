@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.css">
 </head>
 <body>
-    <h1>Привет ебать</h1>
+    <h1>Привет хуй</h1>
 </body>
 <script src = '{{env('APP_URL')}}/js/main.js'></script>
 </html>
