@@ -9,6 +9,11 @@
 </head>
 <body>
 <h1>PLAYER</h1>
+<div class="player_box">
+    <div class="player">
+
+    </div>
+</div>
 </body>
 <script src = '{{env('APP_URL')}}/js/main.js'></script>
 </html>
