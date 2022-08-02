@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/hui', function () {
     return view('forms');
 });
+
+Route::get('/player', function () {
+    return view('player');
+});
