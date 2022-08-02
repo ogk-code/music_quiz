@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.css">
 </head>
 <body>
-    <h1>Юра Лутай рапиру</h1>
+    <a class="btn" href="#">Добавить автора</a>
 </body>
 <script src = '{{env('APP_URL')}}/js/main.js'></script>
 </html>
