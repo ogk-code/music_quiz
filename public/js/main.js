@@ -1,4 +1,3 @@
-const APP_URL=$('#APP_URL');
 const playBtn = $('.play');
 const audio = $('.audio');
 const progressContainer = $('.player_progress_container');
@@ -6,7 +5,9 @@ const progress = $('.player_progress');
 const playSrc = $('.play_src');
 const song = $('#player_song');
 const SRC_IMG_PLAY=$('#SRC_IMG_PLAY');
-const SRC_IMG_PAUSE=$('#SRC_IMG_PAUSE');
+const SRC_IMG_REPEAT=$('#SRC_IMG_PAUSE');
+
+let repeatPossibility;
 
 function selectSong() {
     audio.attr('src', song.text());
@@ -14,21 +15,23 @@ function selectSong() {
 
 function playSong() {
     audio[0].play();
+    playSrc.attr('src',SRC_IMG_REPEAT.text());
 }
 
 function pauseSong() {
     audio[0].pause();
+    playSrc.attr('src', SRC_IMG_PLAY.text())
+    repeatPossibility?playBtn.attr('disabled',''):playBtn.attr('disabled','disabled');
+
 }
 
 playBtn.bind('click', () => {
-    if(audio[0].paused) {
-        selectSong();
-        playSong();
-        playSrc.attr('src',APP_URL.text()+SRC_IMG_PAUSE.text())
-    }else {
-        pauseSong();
-        playSrc.attr('src',APP_URL.text()+SRC_IMG_PLAY.text())
-
-    }
-
+    audio[0].paused&&(
+        repeatPossibility=1,
+        selectSong(),
+        playSong(),
+        setTimeout(()=> pauseSong(),2000)
+    );
 })
+
+
