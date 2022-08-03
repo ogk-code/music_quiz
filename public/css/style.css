@@ -3,6 +3,16 @@
     justify-content: center;
     align-items: center;
     background: white;
+    flex-direction: column;
+}
+.randomSong{
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 240px;
+
 }
 .player{
     background: lightgray;
@@ -17,15 +27,18 @@
     font-size: 14px;
     line-height: 16px;
     text-align: center;
-    margin-bottom: 15px;
 }
 .player_buttons{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    pointer-events: none;
 }
 .player_buttons_btn{
+    cursor: pointer;
+}
+.selectButton{
     cursor: pointer;
 }
 .player_play_src {
@@ -34,7 +47,6 @@
     margin-left: -5%;
     padding: 0;
 }
-
 .player_progress_container{
     border-radius: 5px;
     background-color: ghostwhite;
@@ -42,12 +54,10 @@
     height: 10px;
     display: flex;
     align-items: center;
-    cursor: pointer;
     align-self: center;
 }
 .player_progress{
     background-color: darkviolet;
     border-radius: 5px;
     height: 6px;
-    width: 100%;
 }
