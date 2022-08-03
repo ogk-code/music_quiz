@@ -27,7 +27,7 @@ class SearchYoutubeVideoHelper
         $service     = new Google\Service\YouTube($this->client);
         $queryParams = [
             'maxResults' => 10,
-            'q'          => 'eminem',
+            'q'          => $query,
         ];
 
         $response = $service->search->listSearch('snippet', $queryParams);
