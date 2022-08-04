@@ -20,3 +20,8 @@ Route::get('/', function () {
 Route::get('/hui', function () {
     return view('forms');
 });
+
+Route::get("/test", [App\Http\Controllers\Controller::class,'testAction' ]);
+
+Route::get("/player", [App\Http\Controllers\Controller::class,'playerAction' ]);
+
