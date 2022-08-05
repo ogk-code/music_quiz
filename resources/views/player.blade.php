@@ -28,7 +28,7 @@
                     <div class="player_progress"></div>
                 </div>
             </div>
-            <a href="" class="player_show_track_button">Show track</a>
+            <a href="#" class="player_show_track_button">Show track</a>
             <span hidden class="player_track_name"></span>
         </div>
         <div class="players_score_block">
