@@ -16,27 +16,6 @@
             <th>Исполнитель</th>
             <th><a id="add" href="#">Добавить</a></th>
             </tr>
-
-            <!-- <tr>
-            <td>Пасош</td>
-            <td><a class="remove" href="#">Удалить</a></td>
-            </tr>
-
-            <tr>
-            <td>Настя Кош</td>
-            <td><a class="remove" href="#">Удалить</a></td>
-            </tr>
-
-            <tr>
-            <td>Гражданская оборона</td>
-            <td><a class="remove" href="#">Удалить</a></td>
-            </tr>
-
-            <tr>
-            <td>Kizaru</td>
-            <td><a class="remove" href="#">Удалить</a></td>
-            </tr> -->
-
         </table>
     </section>
 
