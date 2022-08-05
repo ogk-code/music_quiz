@@ -149,7 +149,8 @@ table td {
     font-size: 12px;
     display: block;
     text-align: right;
-    pointer-events: none;
+    cursor: pointer;
+    color: #666699;
 }
 
 .player_track_name{

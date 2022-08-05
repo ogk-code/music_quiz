@@ -28,7 +28,7 @@
                     <div class="player_progress"></div>
                 </div>
             </div>
-            <a class="player_show_track_button">Show track</a>
+            <a class="player_show_track_button"><u>Show track</u></a>
             <span style="display: none" class="player_track_name">{!! $songTitle !!}</span>
         </div>
         <div class="players_score_block">
