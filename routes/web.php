@@ -21,7 +21,12 @@ Route::get('/hui', function () {
     return view('forms');
 });
 
-Route::get("/test", [App\Http\Controllers\Controller::class,'testAction' ]);
 
-Route::get("/player", [App\Http\Controllers\Controller::class,'playerAction' ]);
+
+Route::post("/users", [App\Http\Controllers\Controller::class,'userFormAction' ]);
+Route::post("/authors", [App\Http\Controllers\Controller::class,'authorsFormAction' ]);
+Route::post("/play", [App\Http\Controllers\Controller::class,'playerAction' ]);
+
+
+
 

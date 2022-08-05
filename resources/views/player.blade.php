@@ -36,15 +36,29 @@
                 <tr>
                     <th style="border-right: black 1px solid">Player</th>
                     <th>Score</th>
+                    @foreach($players as $player)
+                    <tr class="players_score_table_tr">
+                        <td >
+                            <a>{{$player['name']}}</a>
+                        </td>
+                        <td class="players_score_table_td">
+                            <span class="players_score">0</span>
+                        </td>
+                        <td  class="players_score_table_td">
+                            <button  onclick="incScore(this)" class="players_inc_score_button">+</button>
+                        </td>
+                    </tr>
+                    @endforeach
                 </tr>
             </table>
         </div>
     </div>
 
-{{--    <div class="players_input_group">--}}
-{{--        <textarea class="players_input" id="playerName" required></textarea>--}}
-{{--        <label class="players_label">Enter player nick name</label>--}}
-{{--    </div>--}}
+    <form action="{{env('APP_URL')}}/play" method="POST">
+        @csrf
+        <input type="hidden" name="time" value="{{$time}}">
+        <input type="submit" value="next song">
+    </form>
 
 
 </div>

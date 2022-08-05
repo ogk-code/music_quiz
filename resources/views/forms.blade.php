@@ -10,18 +10,21 @@
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
-
 <section>
-    <form action="{{env("APP_URL")}}/users" method="POST">
+    <form action="{{env("APP_URL")}}/authors" method="POST">
         <table id="table">
             @csrf
+            <input type="hidden" value="{{$session}}">
             <tr>
                 <th>Исполнитель</th>
-                <th><a id="add" href="#">Добавить</a></th>
+                <th><a id="add">Добавить</a></th>
             </tr>
         </table>
-    </form>
+        <input type="hidden" name="time" value="{{$session}}">
 
+        <input type="submit" value="confirm">
+
+    </form>
 </section>
 
 </body>
