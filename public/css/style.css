@@ -1,3 +1,62 @@
+/* Испонители */
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Play', sans-serif;
+}
+
+section {
+    margin: 0 auto;
+    max-width: 768px;
+ }
+
+table {
+    font-size: 18px;
+    background: white;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin: 0 auto 20px;
+ }
+ 
+td {
+    transition: .3s linear;
+ }
+
+table a{
+    color: inherit;
+    text-decoration: none;
+ }
+
+table a:hover{
+    text-decoration: underline;
+ }
+
+table th {
+    font-size: 20px;
+    font-weight: normal;
+    color: #039;
+    padding: 10px 15px;
+ }
+ 
+table td {
+    color: #669;
+    border-top: 1px solid #e8edff;
+    padding: 10px 15px;
+ }
+ 
+ table tr:hover td {
+    background: #e8edff;
+ }
+/* ------------ */
+
 .player_wrapper{
     display: flex;
     justify-content: center;
@@ -61,3 +120,5 @@
     border-radius: 5px;
     height: 6px;
 }
+
+/* fae74553abbb97cabd2ed00083c929315436d7ae */
