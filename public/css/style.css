@@ -1,5 +1,5 @@
 
-.player_wrapper
+.player_wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,9 +79,8 @@
 }
 
 .player_wrapper {
-=======
-/* Испонители */
 @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+}
 
 *{
     margin: 0;
@@ -107,7 +106,7 @@ table {
     text-align: left;
     margin: 0 auto 20px;
  }
- 
+
 td {
     transition: .3s linear;
  }
@@ -127,13 +126,13 @@ table th {
     color: #039;
     padding: 10px 15px;
  }
- 
+
 table td {
     color: #669;
     border-top: 1px solid #e8edff;
     padding: 10px 15px;
  }
- 
+
  table tr:hover td {
     background: #e8edff;
  }
@@ -300,5 +299,5 @@ table td {
 .players_score_table_td {
     text-align: center;
 }
- 
+
 /* ------------ */
