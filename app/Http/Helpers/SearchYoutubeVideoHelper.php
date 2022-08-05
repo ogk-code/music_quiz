@@ -28,12 +28,16 @@ class SearchYoutubeVideoHelper
         $queryParams = [
             'maxResults' => 10,
             'q'          => $query,
+            'type'       => "music",
         ];
 
         $response = $service->search->listSearch('snippet', $queryParams);
 
         return array_map(function ($item) {
-            return $item->id->videoId;
+            return [
+                'title' => $item->snippet->title,
+                'id' => $item->id->videoId
+            ];
         }, $response->getItems());
     }
 }

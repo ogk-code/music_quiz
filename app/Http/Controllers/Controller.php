@@ -27,8 +27,11 @@ class Controller extends BaseController
         $param = $request->get('q');
         $search = new SearchYoutubeVideoHelper();
         $items = $search->getVideoIdArrayByQuery($param);
-        $link = $this->getMusicUrlForPlayer($items[random_int(0, 9)]);
-        return view('player', ['link' => $link]);
+
+        $randomId = random_int(0, 9);
+
+        $link = $this->getMusicUrlForPlayer($items[$randomId]['id']);
+        return view('player', ['link' => $link, 'songTitle'=>$items[$randomId]['title']]);
     }
 
     private function getMusicUrlForPlayer($videoId)

@@ -12,10 +12,10 @@
 <body>
 <h1>PLAYER</h1>
 <div class="player_wrapper">
-    <div class="randomSong">
-        <span class="player_title">Сгенерировать песню</span>
-        <button class="selectButton">Generate song</button>
-    </div>
+{{--    <div class="randomSong">--}}
+{{--        <span class="player_title">Сгенерировать песню</span>--}}
+{{--        <button class="selectButton">Generate song</button>--}}
+{{--    </div>--}}
     <div class="player_block">
         <div class="player">
             <div class="player_title">Now Playing...</div>
@@ -28,14 +28,14 @@
                     <div class="player_progress"></div>
                 </div>
             </div>
-            <a href="#" class="player_show_track_button">Show track</a>
-            <span hidden class="player_track_name"></span>
+            <a class="player_show_track_button">Show track</a>
+            <span style="display: none" class="player_track_name">{!! $songTitle !!}</span>
         </div>
         <div class="players_score_block">
             <table class="players_ordered_list">
                 <tr>
                     <th style="border-right: black 1px solid">Player</th>
-                    <th >Score</th>
+                    <th>Score</th>
                 </tr>
             </table>
         </div>
@@ -45,7 +45,6 @@
         <textarea class="players_input" id="playerName" required></textarea>
         <label class="players_label">Enter player nick name</label>
     </div>
-
 
 
 </div>
