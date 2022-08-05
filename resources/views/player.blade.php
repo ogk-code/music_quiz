@@ -41,10 +41,10 @@
         </div>
     </div>
 
-    <div class="players_input_group">
-        <textarea class="players_input" id="playerName" required></textarea>
-        <label class="players_label">Enter player nick name</label>
-    </div>
+{{--    <div class="players_input_group">--}}
+{{--        <textarea class="players_input" id="playerName" required></textarea>--}}
+{{--        <label class="players_label">Enter player nick name</label>--}}
+{{--    </div>--}}
 
 
 </div>

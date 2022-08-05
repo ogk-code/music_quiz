@@ -139,7 +139,7 @@ $('#add').on('click', function () {
 })
 
 function getRowHtml(name) {
-    return '<tr><td>' + name + '</td><td><a class="remove" href="#">Удалить</a></td></tr>';
+    return '<tr><td>' + name + '</td><td><a class="remove" href="#">Удалить</a><input type="hidden" value="'+name+'"></td></tr>';
 }
 
 function showSongTitle() {
