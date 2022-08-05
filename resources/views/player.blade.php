@@ -22,7 +22,7 @@
             <audio class="audio"></audio>
             <div class="player_buttons">
                 <div class="player_buttons_btn play">
-                    <img class="play_src" src="{{env('APP_URL')}}/img/play.png" alt="btn">
+                    <img class="player_play_src" src="{{env('APP_URL')}}/img/play.png" alt="btn">
                 </div>
                 <div class="player_progress_container">
                     <div class="player_progress"></div>

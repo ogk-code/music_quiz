@@ -13,7 +13,10 @@
 }
 
 .player {
-    background: lightgray;
+    background: -webkit-linear-gradient(180deg, #23379a,#09133c);
+    background: linear-gradient(180deg, #23379a,#09133c);
+    opacity: 0.8;
+    filter: alpha(Opacity=80);
     border-radius: 30px;
     max-width: 240px;
     max-height: 200px;
@@ -37,6 +40,7 @@
     font-size: 14px;
     line-height: 16px;
     text-align: center;
+    color: white;
 }
 
 .player_buttons {
@@ -60,6 +64,7 @@
     height: 30px;
     margin-left: -5%;
     padding: 0;
+    background-color: white;
 }
 
 .player_progress_container {
