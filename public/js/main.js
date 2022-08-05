@@ -1,10 +1,13 @@
+const playersListRounded = $('.players_ordered_list');
+const playerButtons = $('.player_buttons');
+const playerShowTrackButton=$('.player_show_track_button');
+const playerTrackName=$('.player_track_name');
+const selectButton = $('.selectButton');
+const progress = $('.player_progress');
+const playersInput = $('.players_input');
+const playSrc = $('.play_src');
 const playBtn = $('.play');
 const audio = $('.audio');
-const progressContainer = $('.player_progress_container');
-const playerButtons = $('.player_buttons');
-const progress = $('.player_progress');
-const playSrc = $('.play_src');
-const selectButton = $('.selectButton');
 const song = $('#player_song');
 const SRC_IMG_PLAY = $('#SRC_IMG_PLAY');
 const SRC_IMG_PAUSE = $('#SRC_IMG_PAUSE');
@@ -21,6 +24,7 @@ function selectSong() {
     remainedTimerDuration = TIMER_DURATION;
 
     playerButtons.css('pointer-events', 'auto');
+    playerShowTrackButton.css('pointer-events','auto');
     audio.attr('src', song.text());
 }
 
@@ -45,6 +49,49 @@ function updateProgress(e) {
 
     progress.css('width', `${progressPercent}%`);
 }
+
+function incScore(el){
+    const score=$(el).closest('tr').find(':nth-child(2)').text();
+
+    $(el).closest('tr').find(':nth-child(2)').text(+score+1);
+}
+
+function getURLVar(key) {
+    let vars = location.search.substr(1).split('&').reduce(function (result, string) {
+        let t = string.split('=');
+        result[decodeURIComponent(t[0])] = t.length == 1 ? null : decodeURIComponent(t[1]);
+        return result;
+    }, {});
+    return vars[key] ? vars[key] : '';
+}
+
+playerShowTrackButton.bind('click',()=>{
+    playerTrackName.attr('hidden','');
+    playerTrackName.text(getURLVar('q'));
+})
+
+$(document).ready(() => {
+    playersInput.keydown((e) => {
+        e.keyCode == 13 && (
+            e.preventDefault(),
+                playersListRounded.append(`
+            <tr class="players_score_table_tr">
+                <td >
+                    <a>${playersInput.val()}:</a>
+                </td>
+                <td class="players_score_table_td">
+                    <span class="players_score">0</span>
+                </td>
+                <td  class="players_score_table_td">
+                    <button  onclick="incScore(this)" class="players_inc_score_button">+</button>
+                </td>
+            </tr>
+            `),
+                playersInput.scrollTop(0),
+                playersInput.val('')
+        )
+    })
+})
 
 audio.bind('timeupdate', updateProgress)
 
