@@ -127,3 +127,18 @@ playBtn.bind('click', () => {
 
 
 
+$('#add').on('click', function(){
+    let name = prompt('Исполнитель');
+    if(!name || name == "Моргенштерн" || name == "Егор Крид"){
+        alert('Иди нахуй!');
+        return;
+    }
+    $('#table').append(getRowHtml(name));
+    $('.remove').on('click', function(){
+        $(this).parent().parent().remove();
+    })
+})
+
+function getRowHtml(name){
+    return '<tr><td>'+name+'</td><td><a class="remove" href="#">Удалить</a></td></tr>';
+}
